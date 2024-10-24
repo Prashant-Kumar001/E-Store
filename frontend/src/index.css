@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.login {
+  font-family: 'roboto', sans-serif; /* Added sans-serif as fallback */
+  font-weight: 500;
+  background-color: transparent;
+  border: 2px solid rgba(130, 137, 142, 0.8); /* Corrected to rgba */
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+  cursor: pointer; /* Optional: Change cursor on hover */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Optional: Smooth transition */
+}
+
+.login:hover {
+  background-color: rgba(0, 150, 255, 0.1); /* Optional: Change background color on hover */
+  border-color: rgba(0, 150, 255, 1); /* Optional: Change border color on hover */
+}
+.logout {
+  font-family: 'roboto', sans-serif; /* Added sans-serif as fallback */
+  background-color: transparent;
+  border: 2px solid rgba(255, 0, 0, 0.8); /* Red border for logout */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+.logout:hover {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red background on hover */
+  border-color: rgba(255, 0, 0, 1); /* Darker red border on hover */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sun-rotate {
+  animation: sun-rotate 5s linear infinite;
+}
+
+@keyframes sun-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.moon-rotate {
+  animation: moon-rotate 3s linear alternate infinite;
+}
+.glow {
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 100px rgba(255, 255, 0, 0.8);
+  color: yellow;
+}
+@keyframes moon-rotate {
+  0% {
+    transform: rotate(60deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-60deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+.border {
+  border: 1px solid rgb(40, 39, 39, 0.7);
+}
+.border_1 {
+  border: 1px solid rgba(73, 71, 71, 0.9);
+}
+.link-animation {
+  transition: all 0.5s ease-in-out;
+}
+.link-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.link-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.ball {
+  position: relative;
+  border-radius: 10px;
+}
+.ball::after,
+.ball::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 2px;
+  border-radius: 10px;
+}
+.ball::before {
+  filter: blur(10px);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ball:hover::after {
+  background-image: conic-gradient(
+    red 0deg,
+    blue,
+    rgb(255, 255, 0),
+    purple,
+    red
+  );
+  animation: all 2s;
+}
+.no-background {
+  background: none !important; /* Use only if absolutely necessary */
+}
+.glow-white {
+  filter: drop-shadow(
+    0 0 100px rgba(255, 255, 255, 0.8)
+  );
+}
+
+.glow-aqua {
+  filter: drop-shadow(
+    0 0 100px rgba(0, 255, 255, 0.8)
+  );
+}
+
+.glow-pink {
+  filter: drop-shadow(
+    0 0 100px rgba(255, 0, 255, 0.8)
+  );
+}
+
+.glow-red {
+  filter: drop-shadow(
+    0 0 100px rgba(255, 69, 0, 0.8)
+  );
+}
+ /* for bg light  */
+.glow-yellow {
+  filter: drop-shadow(
+      0 0 100px rgba(255, 223, 0, 0.8)
+  );
+}
+
+.glow-blue {
+  filter: drop-shadow(
+      0 0 100px rgba(0, 150, 255, 0.8)
+  );
+}
+
+.glow-green {
+  filter: drop-shadow(
+      0 0 100px rgba(0, 255, 100, 0.8)
+  );
+}
+
+.glow-white {
+  filter: drop-shadow(
+      0 0 100px rgba(255, 255, 255, 0.8)
+  );
+}
